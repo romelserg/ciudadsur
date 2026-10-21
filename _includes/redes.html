@@ -1,0 +1,1 @@
+{% for red in site.redes %}{% if red[1] != "" %}<a href="{{ red[1] }}" target="_blank" rel="noopener" aria-label="{{ red[0] | capitalize }}"><i class="bi bi-{% if red[0] == 'twitter' %}twitter-x{% else %}{{ red[0] }}{% endif %}"></i></a>{% endif %}{% endfor %}

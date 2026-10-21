@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign articulos = site.posts | where: "category", page.seccion %}
+<section class="pagina-titulo">
+  <h1>{{ page.seccion }}</h1>
+  {{ content }}
+</section>
+
+<section class="bloque-tarjetas">
+  <div class="container">
+    <div class="row g-4">
+      {% for art in articulos %}
+        {% include tarjeta.html articulo=art %}
+      {% endfor %}
+      {% if articulos.size == 0 %}
+        <p class="text-center sin-articulos">Pronto publicaremos artículos en esta sección.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

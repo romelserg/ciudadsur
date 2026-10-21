@@ -1,0 +1,43 @@
+# Configuración general de Ciudad Sur
+title: Ciudad Sur
+description: >-
+  Es un proyecto descentralizado que nace de la necesidad de pensar el país desde el Sur.
+  Por ello, es un espacio multidisciplinario que apuesta por articular las diversas voces
+  mediante el diálogo, la crítica y la exposición, haciendo frente, así, al centralismo de
+  la información. Para alcanzarlo, esta revista se define en gerundio es decir, en
+  constante proceso: haciéndose.
+url: https://ciudadsur.pe
+lang: es_PE
+email: ciudadsur@gmail.com
+logo: /assets/img/logo-blanco.png
+
+# Redes sociales (deja vacío "" para ocultar alguna)
+redes:
+  facebook: https://www.facebook.com/revistaciudadsur
+  instagram: https://www.instagram.com/ciudad.sur/
+  twitter: https://twitter.com/Ciudad_Sur_
+  youtube: https://www.youtube.com/channel/UCDP4_-rWgdF-LOLUxxkyl1g
+
+# Cuántos artículos aparecen en el carrusel principal de la portada
+destacados: 6
+
+# Mantiene las mismas direcciones que tenía el sitio antiguo: /post/nombre-del-articulo
+permalink: /post/:title
+
+timezone: America/Lima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: articulo
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

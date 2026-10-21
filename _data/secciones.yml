@@ -1,0 +1,9 @@
+# Secciones del menú. El "nombre" debe coincidir con la "category" de cada artículo.
+- nombre: Actualidad
+  url: /seccion/actualidad
+- nombre: Social
+  url: /seccion/social
+- nombre: Arte & Cultura
+  url: /seccion/arte-y-cultura
+- nombre: Proyectos Especiales
+  url: /seccion/proyectos-especiales

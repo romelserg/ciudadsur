@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% assign seccion = site.data.secciones | where: "nombre", page.category | first %}
+<article class="articulo">
+  <header class="articulo-cabecera">
+    <span class="articulo-numero">
+      Ciudad Sur{% if page.numero %} Nº {{ page.numero }}{% endif %} · {{ page.date | date: "%d/%m/%Y" }}
+      {% if seccion %} · <a href="{{ seccion.url | relative_url }}">{{ page.category }}</a>{% endif %}
+    </span>
+    <h1>{{ page.title }}</h1>
+    <div class="linea-vertical"></div>
+    <div class="articulo-autor">
+      {% if page.author_image %}
+        <img src="{{ page.author_image | relative_url }}" alt="{{ page.author }}">
+      {% else %}
+        <span class="autor-inicial">{{ page.author | slice: 0 }}</span>
+      {% endif %}
+      <p>{{ page.author }}</p>
+    </div>
+    <div class="linea-vertical"></div>
+  </header>
+
+  {% if page.image %}
+  <figure class="articulo-portada">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+    {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-8 articulo-texto">
+        {{ content }}
+
+        <div class="compartir">
+          <span>Compartir:</span>
+          {% assign enlace = page.url | absolute_url | url_encode %}
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ enlace }}" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url={{ enlace }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ enlace }}" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <aside class="col-lg-4 articulo-lateral">
+        <h4>Más artículos</h4>
+        {% assign contador = 0 %}
+        {% for art in site.posts %}
+          {% if art.url != page.url and contador < 4 %}
+          <a class="mini-articulo" href="{{ art.url | relative_url }}">
+            {% if art.image %}<img src="{{ art.image | relative_url }}" alt="" loading="lazy">{% else %}<span class="mini-sin-imagen"></span>{% endif %}
+            <span>
+              <strong>{{ art.title }}</strong>
+              <small>{{ art.author }}</small>
+            </span>
+          </a>
+          {% assign contador = contador | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </aside>
+    </div>
+  </div>
+</article>

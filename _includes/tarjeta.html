@@ -1,0 +1,9 @@
+{% assign art = include.articulo %}
+<div class="{{ include.columna | default: 'col-md-6 col-lg-4' }}">
+  <a class="tarjeta{% unless art.image %} sin-imagen{% endunless %}" href="{{ art.url | relative_url }}"
+     {% if art.image %}style="background-image:url('{{ art.image | relative_url }}')"{% endif %}>
+    <span class="tarjeta-seccion">{{ art.category }}</span>
+    <h3 class="tarjeta-titulo">{{ art.title }}</h3>
+    <span class="tarjeta-autor">{{ art.author }}</span>
+  </a>
+</div>

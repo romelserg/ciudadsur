@@ -1,0 +1,245 @@
+/* ==========================================================
+   Ciudad Sur — estilos del sitio
+   Los colores principales se cambian aquí:
+   ========================================================== */
+:root {
+  --borgona: #671b27;       /* color de acento original */
+  --borgona-claro: #85200c;
+  --fondo: #d1c5c5;         /* fondo rosado grisáceo original */
+  --papel: #faf7f6;         /* fondo del texto de los artículos */
+  --tinta: #1d1b1b;
+  --gris: #6b6262;
+  --negro: #000;
+  --cabecera-alto: 100px;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: "Open Sans", sans-serif;
+}
+a { color: var(--borgona); }
+a:hover { color: var(--borgona-claro); }
+h1, h2, h3, .cardo { font-family: "Cardo", serif; }
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1030;
+  height: var(--cabecera-alto);
+  background: rgba(0, 0, 0, .9);
+  transition: background .4s, height .4s;
+}
+.es-portada .cabecera { background: transparent; }
+.es-portada .cabecera.con-fondo,
+.cabecera.con-fondo { background: rgba(0, 0, 0, .9); height: 80px; }
+.cabecera-fila {
+  height: 100%; padding: 0 2rem;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+}
+.cabecera-logo img { height: 74px; width: auto; transition: height .4s; }
+.cabecera.con-fondo .cabecera-logo img { height: 60px; }
+.cabecera-redes { justify-self: end; }
+.cabecera-redes a, .menu-redes a, .pie-redes a {
+  color: #fff; font-size: 1.15rem; padding: .4rem .55rem;
+}
+.cabecera-redes a:hover { color: #e9b9c1; }
+.boton-menu {
+  background: none; border: 0; color: #fff;
+  font-family: "Cardo", serif; font-size: 1.35rem;
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.boton-menu i { font-size: 1.8rem; }
+.boton-menu:hover { color: #e9b9c1; }
+
+/* ---------- Menú lateral ---------- */
+.menu-lateral { background: #111; color: #fff; width: 280px !important; }
+.menu-lateral .offcanvas-body { display: flex; flex-direction: column; padding-top: 1rem; }
+.menu-lateral .offcanvas-body > a {
+  color: #ddd; text-decoration: none;
+  font-family: "Cardo", serif; font-size: 1.45rem;
+  padding: .6rem .5rem; border-bottom: 1px solid #262626;
+}
+.menu-lateral .offcanvas-body > a:hover { color: #fff; padding-left: 1rem; transition: padding .2s; }
+.menu-redes { margin-top: auto; padding-top: 2rem; }
+
+/* ---------- Carrusel de portada ---------- */
+#carrusel { height: 100vh; min-height: 520px; background: #000; }
+#carrusel .carousel-inner, #carrusel .carousel-item { height: 100%; }
+#carrusel .carousel-item {
+  background: var(--borgona) center / cover no-repeat;
+}
+#carrusel .carousel-item::before {
+  content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .6);
+}
+.carrusel-texto {
+  position: absolute; inset: 70px 12% 0; z-index: 2;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; color: #fff;
+}
+.carrusel-texto h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700; margin-bottom: .8rem; }
+.carrusel-texto p { font-size: 1.1rem; margin-bottom: 1.8rem; }
+.boton-borde {
+  font-family: "Montserrat", sans-serif; font-weight: 500; letter-spacing: 1px;
+  text-transform: uppercase; text-decoration: none;
+  color: #fff; border: 2px solid #fff; border-radius: 50px; padding: .65rem 2.2rem;
+  transition: .3s;
+}
+.boton-borde:hover { background: var(--borgona); border-color: var(--borgona); color: #fff; }
+#carrusel .carousel-control-prev, #carrusel .carousel-control-next { width: 8%; font-size: 2.4rem; color: #fff; z-index: 3; }
+#carrusel .carousel-indicators { z-index: 3; }
+#carrusel .carousel-indicators [data-bs-target] { width: 11px; height: 11px; border-radius: 50%; }
+
+/* ---------- Tarjetas de artículos ---------- */
+.bloque-tarjetas { padding: 4rem 0; }
+.tarjeta {
+  position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  min-height: 300px; padding: 3.5rem 1.8rem;
+  border-radius: 10px; overflow: hidden; text-align: center; text-decoration: none; color: #fff;
+  background: var(--borgona) center / cover no-repeat;
+  transition: transform .5s cubic-bezier(.19, 1, .22, 1), background-size .5s;
+}
+.tarjeta::before {
+  content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, .45);
+  transition: background .8s cubic-bezier(.19, 1, .22, 1);
+}
+.tarjeta > * { position: relative; }
+.tarjeta:hover { transform: scale(.98); color: #fff; }
+.tarjeta:hover::before { background: rgba(0, 0, 0, .15); }
+.tarjeta:hover .tarjeta-titulo { opacity: 0; }
+.tarjeta.sin-imagen:hover .tarjeta-titulo { opacity: 1; }
+.tarjeta.sin-imagen { background-image: linear-gradient(135deg, var(--borgona), #2b0c11); }
+.tarjeta-titulo { font-size: 1.55rem; font-weight: 700; margin: 0; transition: opacity .5s; }
+.tarjeta-seccion, .tarjeta-autor { position: absolute !important; left: 0; right: 0; font-size: .95rem; }
+.tarjeta-seccion { top: 1.4rem; font-family: "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; }
+.tarjeta-autor { bottom: 1.4rem; }
+
+/* ---------- Llamado a la acción ---------- */
+.llamado {
+  background: linear-gradient(rgba(103, 27, 39, .88), rgba(0, 0, 0, .85)), url("../img/articulos/rosaspata.jpg") center / cover;
+  color: #fff; padding: 4.5rem 0;
+}
+.llamado h3 { font-size: 2rem; font-weight: 700; }
+.llamado p { max-width: 600px; margin: 0 auto 1.6rem; }
+.boton-llamado {
+  font-family: "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;
+  display: inline-block; padding: .55rem 1.8rem; border-radius: 25px;
+  border: 2px solid #fff; color: #fff; text-decoration: none; transition: .3s;
+}
+.boton-llamado:hover { background: #fff; color: var(--borgona); }
+
+/* ---------- Página de artículo ---------- */
+.articulo { padding-top: var(--cabecera-alto); }
+.articulo-cabecera { text-align: center; padding: 4rem 1rem 2rem; max-width: 980px; margin: 0 auto; }
+.articulo-numero { font-family: "Montserrat", sans-serif; font-size: .85rem; letter-spacing: 1px; color: var(--gris); }
+.articulo-numero a { color: var(--borgona); text-decoration: none; font-weight: 600; }
+.articulo-cabecera h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); font-weight: 700; margin: .7em 0 0; color: #000; }
+.linea-vertical { height: 60px; width: 1px; border-left: 1px solid #8a7f7f; margin: 30px auto; }
+.articulo-autor img, .autor-inicial {
+  width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: inline-flex;
+}
+.autor-inicial {
+  align-items: center; justify-content: center; background: var(--borgona); color: #fff;
+  font-family: "Cardo", serif; font-size: 2.2rem;
+}
+.articulo-autor p { margin: .6rem 0 0; font-weight: 600; }
+.articulo-portada { margin: 0 0 3rem; }
+.articulo-portada img { width: 100%; max-height: 80vh; object-fit: cover; display: block; }
+.articulo-portada figcaption { text-align: center; font-size: .85rem; color: var(--gris); padding-top: .5rem; }
+
+.articulo-texto {
+  background: var(--papel); border-radius: 10px;
+  padding: 2.5rem clamp(1.2rem, 4vw, 3.5rem);
+  font-family: "Cardo", Georgia, serif; font-size: 1.22rem; line-height: 1.75;
+}
+.articulo-texto p { margin-bottom: 1.25em; text-align: justify; hyphens: auto; }
+.articulo-texto h2, .articulo-texto h3 { color: var(--borgona); font-weight: 700; margin: 1.8em 0 .7em; }
+.articulo-texto h2 { font-size: 1.6rem; }
+.articulo-texto h3 { font-size: 1.25rem; }
+.articulo-texto hr { margin: 2rem auto; width: 30%; opacity: .4; }
+.articulo-texto img { max-width: 100%; height: auto; border-radius: 6px; }
+.articulo-texto blockquote { border-left: 4px solid var(--borgona); padding-left: 1.2rem; color: #4b4242; font-style: italic; }
+
+/* Videos (YouTube, Vimeo) y mapas que se adaptan al ancho */
+.video, .mapa { position: relative; aspect-ratio: 16 / 9; margin: 0 0 2rem; }
+.mapa { aspect-ratio: 4 / 3; }
+.video iframe, .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+
+/* Tablas */
+.tabla { overflow-x: auto; margin: 0 0 2rem; }
+.tabla table { width: 100%; border-collapse: collapse; font-family: "Open Sans", sans-serif; font-size: .9rem; line-height: 1.4; }
+.tabla td, .tabla th { border-bottom: 1px solid #cfc6c6; padding: .55rem .7rem; text-align: center; }
+.tabla tr:first-child td, .tabla th { background: var(--borgona); color: #fff; font-weight: 600; }
+
+.compartir { border-top: 1px solid #e2dada; margin-top: 2.5rem; padding-top: 1.2rem; font-family: "Open Sans", sans-serif; font-size: 1rem; }
+.compartir a { font-size: 1.3rem; margin-left: .7rem; }
+
+.articulo-lateral h4 {
+  font-family: "Montserrat", sans-serif; font-size: .95rem; text-transform: uppercase; letter-spacing: 2px;
+  border-bottom: 2px solid var(--borgona); padding-bottom: .6rem; margin-bottom: 1.2rem;
+}
+.mini-articulo { display: flex; gap: .9rem; text-decoration: none; color: var(--tinta); margin-bottom: 1.2rem; }
+.mini-articulo img, .mini-sin-imagen { width: 96px; height: 72px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+.mini-sin-imagen { background: linear-gradient(135deg, var(--borgona), #2b0c11); }
+.mini-articulo strong { display: block; font-family: "Cardo", serif; font-size: 1.05rem; line-height: 1.3; }
+.mini-articulo small { color: var(--gris); }
+.mini-articulo:hover strong { color: var(--borgona); }
+.articulo + * { margin-top: 0; }
+.articulo .container { padding-bottom: 4rem; }
+
+/* ---------- Secciones y páginas ---------- */
+.pagina-titulo { padding: calc(var(--cabecera-alto) + 3.5rem) 1rem 0; text-align: center; }
+.pagina-titulo h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; }
+.pagina-titulo h1::after { content: ""; display: block; width: 60px; height: 3px; background: var(--borgona); margin: 1rem auto 0; }
+.pagina-texto {
+  background: var(--papel); border-radius: 10px; max-width: 820px; margin: 2.5rem auto 4rem;
+  padding: 2.5rem clamp(1.2rem, 4vw, 3rem); font-size: 1.08rem; line-height: 1.7;
+}
+.pagina-texto h2 { color: var(--borgona); font-size: 1.6rem; margin-top: 1.5rem; }
+.sin-articulos { padding: 3rem 0; color: var(--gris); }
+
+/* ---------- Pie de página ---------- */
+#pie { background: #111; color: #ccc; font-size: .92rem; padding-top: 3.5rem; }
+#pie a { color: #ddd; text-decoration: none; }
+#pie a:hover { color: #fff; }
+.pie-info h3 {
+  font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: 3px; font-size: 1.9rem; color: #fff;
+  border-left: 4px solid var(--borgona); padding-left: .7rem; margin-bottom: 1.2rem;
+}
+.pie-info p { line-height: 1.8; }
+#pie h4 {
+  font-family: "Montserrat", sans-serif; font-size: .9rem; font-weight: 700; color: #fff; text-transform: uppercase;
+  position: relative; padding-bottom: .8rem; margin-bottom: 1.2rem;
+}
+#pie h4::before, #pie h4::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; }
+#pie h4::before { right: 0; background: #444; }
+#pie h4::after { width: 60px; background: var(--borgona); }
+.pie-enlaces { list-style: none; padding: 0; }
+.pie-enlaces li { padding: .35rem 0; border-bottom: 1px solid #222; }
+.pie-enlaces i { color: var(--borgona); font-size: .75rem; }
+.pie-redes a { display: inline-flex; width: 38px; height: 38px; border-radius: 50%; background: #2a2a2a; align-items: center; justify-content: center; margin-right: .3rem; padding: 0; }
+.pie-redes a:hover { background: var(--borgona); }
+.pie-final { background: #000; text-align: center; padding: 1.4rem 1rem; margin-top: 2.5rem; color: #999; font-size: .85rem; }
+
+.volver-arriba {
+  position: fixed; right: 15px; bottom: 15px; z-index: 996; width: 42px; height: 42px; border-radius: 50%;
+  background: var(--borgona); color: #fff; font-size: 1.8rem;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: .4s;
+}
+.volver-arriba.visible { opacity: 1; visibility: visible; }
+.volver-arriba:hover { color: #fff; background: var(--borgona-claro); }
+
+/* ---------- Celulares ---------- */
+@media (max-width: 768px) {
+  :root { --cabecera-alto: 72px; }
+  .cabecera-fila { padding: 0 1rem; }
+  .cabecera-logo img, .cabecera.con-fondo .cabecera-logo img { height: 50px; }
+  .cabecera.con-fondo { height: 72px; }
+  .cabecera-redes { display: none; }
+  .boton-menu span { display: none; }
+  .carrusel-texto { inset: 72px 10% 0; }
+  .tarjeta { min-height: 260px; }
+  .tarjeta-titulo { font-size: 1.35rem; }
+  .articulo-texto { font-size: 1.12rem; }
+  .articulo-texto p { text-align: left; }
+}

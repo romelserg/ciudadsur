@@ -1,0 +1,29 @@
+<header id="cabecera" class="cabecera">
+  <div class="cabecera-fila">
+    <div class="cabecera-lado">
+      <button class="boton-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu" aria-label="Abrir menú">
+        <i class="bi bi-list"></i> <span>Menú</span>
+      </button>
+    </div>
+    <a class="cabecera-logo" href="{{ '/' | relative_url }}">
+      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+    </a>
+    <div class="cabecera-lado cabecera-redes">
+      {% include redes.html %}
+    </div>
+  </div>
+</header>
+
+<nav class="offcanvas offcanvas-start menu-lateral" tabindex="-1" id="menu" aria-label="Menú principal">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="{{ '/' | relative_url }}">Inicio</a>
+    {% for seccion in site.data.secciones %}
+      <a href="{{ seccion.url | relative_url }}">{{ seccion.nombre }}</a>
+    {% endfor %}
+    <a href="{{ '/colabora' | relative_url }}">Colabora con Nosotros</a>
+    <div class="menu-redes">{% include redes.html %}</div>
+  </div>
+</nav>
