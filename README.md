@@ -4,7 +4,7 @@ Sitio de la revista **Ciudad Sur** (https://ciudadsur.pe), hecho con Jekyll y al
 
 ## Publicar un artículo nuevo
 
-1. Sube la foto de portada a la carpeta `assets/img/articulos/` (formato `.jpg`, idealmente de menos de 1 MB).
+1. Sube la foto de portada a la carpeta `assets/img/articulos/` (formato `.jpg`, de **menos de 300 KB** para que se vea la vista previa al compartir en WhatsApp).
 2. Crea un archivo en `_posts/` con el nombre `AÑO-MES-DÍA-titulo-corto.md`, por ejemplo:
    `_posts/2026-11-05-la-feria-de-san-pedro.md`
    El "titulo-corto" será la dirección: `ciudadsur.pe/post/la-feria-de-san-pedro`

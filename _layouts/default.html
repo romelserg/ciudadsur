@@ -4,6 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  {% unless page.image %}
+  <!-- Imagen para la vista previa en WhatsApp, Facebook, etc. cuando la página no tiene foto propia -->
+  <meta property="og:image" content="{{ '/assets/img/compartir.jpg' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {% endunless %}
   {% feed_meta %}
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
