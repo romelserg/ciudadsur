@@ -2,7 +2,12 @@
 
 Sitio de la revista **Ciudad Sur** (https://ciudadsur.pe), hecho con Jekyll y alojado gratis en GitHub Pages.
 
-## Publicar un artículo nuevo
+## Panel de edición (la forma fácil)
+
+Entra a **https://ciudadsur.pe/admin**, inicia sesión con tu token de GitHub y usa **Artículos → Nuevo artículo**.
+Las fotos que subas desde el panel se achican automáticamente. Cada vez que guardas, el sitio se actualiza solo en 1–2 minutos.
+
+## Publicar un artículo nuevo (a mano)
 
 1. Sube la foto de portada a la carpeta `assets/img/articulos/` (formato `.jpg`, de **menos de 300 KB** para que se vea la vista previa al compartir en WhatsApp).
 2. Crea un archivo en `_posts/` con el nombre `AÑO-MES-DÍA-titulo-corto.md`, por ejemplo:

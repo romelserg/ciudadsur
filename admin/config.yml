@@ -1,0 +1,94 @@
+# Panel de edición de Ciudad Sur (Sveltia CMS) — https://ciudadsur.pe/admin
+backend:
+  name: github
+  repo: romelserg/ciudadsur
+  branch: main
+  commit_messages:
+    create: "Nuevo artículo: {{slug}}"
+    update: "Edita: {{slug}}"
+    delete: "Borra: {{slug}}"
+    uploadMedia: "Sube imagen: {{path}}"
+    deleteMedia: "Borra imagen: {{path}}"
+
+site_url: https://ciudadsur.pe
+display_url: https://ciudadsur.pe
+logo_url: /assets/img/favicon.png
+
+media_folder: assets/img/articulos
+public_folder: /assets/img/articulos
+
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      # Achica las fotos al subirlas para que la web cargue rápido
+      # y la vista previa de WhatsApp funcione.
+      transformations:
+        raster_image:
+          format: webp
+          quality: 80
+          width: 1600
+          height: 1600
+
+collections:
+  - name: articulos
+    label: Artículos
+    label_singular: Artículo
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title, author, category]
+    summary: "{{title}} — {{author}} ({{date}})"
+    fields:
+      - label: Título
+        name: title
+        widget: string
+      - label: Autor o autora
+        name: author
+        widget: string
+      - label: Fecha de publicación
+        name: date
+        widget: datetime
+        time_format: false
+        format: YYYY-MM-DD
+      - label: Sección
+        name: category
+        widget: select
+        options: [Actualidad, Social, Arte & Cultura, Proyectos Especiales]
+      - label: Foto de portada
+        name: image
+        widget: image
+        required: false
+        hint: Aparece arriba del artículo, en la portada del sitio y al compartir en WhatsApp.
+      - label: Crédito de la foto
+        name: image_caption
+        widget: string
+        required: false
+        hint: "Por ejemplo: Fotografía por Jeff Heimsath"
+      - label: Foto del autor
+        name: author_image
+        widget: image
+        required: false
+      - label: Número de edición
+        name: numero
+        widget: number
+        value_type: int
+        required: false
+      - label: Texto del artículo
+        name: body
+        widget: markdown
+        hint: >-
+          Para insertar un video de YouTube o un mapa de Google Maps, cambia el editor
+          a modo "Markdown" y pega el código como se explica en la guía (README).
+
+  - name: paginas
+    label: Páginas
+    files:
+      - label: Colabora con Nosotros
+        name: colabora
+        file: colabora.md
+        fields:
+          - { label: Layout, name: layout, widget: hidden, default: pagina }
+          - { label: Título, name: title, widget: string }
+          - { label: Dirección, name: permalink, widget: hidden, default: /colabora }
+          - { label: Texto, name: body, widget: markdown }
