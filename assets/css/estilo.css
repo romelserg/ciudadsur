@@ -38,8 +38,8 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
   height: 100%; padding: 0 2rem;
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
 }
-.cabecera-logo img { height: 74px; width: auto; transition: height .4s; }
-.cabecera.con-fondo .cabecera-logo img { height: 60px; }
+.cabecera-logo img { height: 88px; width: auto; transition: height .4s; }
+.cabecera.con-fondo .cabecera-logo img { height: 70px; }
 .cabecera-redes { justify-self: end; display: flex; align-items: center; gap: .2rem; }
 /* Botón a Fiscaliza Cusco (observatorio del Congreso) */
 .cabecera-redes a.boton-fiscaliza {
@@ -94,10 +94,10 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
 .boton-borde {
   font-family: "Montserrat", sans-serif; font-weight: 500; letter-spacing: 1px;
   text-transform: uppercase; text-decoration: none;
-  color: var(--maiz); border: 2px solid var(--maiz); border-radius: 50px; padding: .65rem 2.2rem;
+  color: var(--maiz); border: 0; padding: .65rem 1rem;
   transition: .3s;
 }
-.boton-borde:hover { background: var(--maiz); border-color: var(--maiz); color: #111; }
+.boton-borde:hover { color: var(--maiz-claro); text-decoration: underline; text-underline-offset: 6px; }
 #carrusel .carousel-control-prev, #carrusel .carousel-control-next { width: 8%; font-size: 2.4rem; color: var(--maiz); z-index: 3; }
 #carrusel .carousel-indicators { z-index: 3; }
 #carrusel .carousel-indicators [data-bs-target] { width: 11px; height: 11px; border-radius: 50%; background-color: var(--maiz); }
@@ -246,7 +246,7 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
 @media (max-width: 768px) {
   :root { --cabecera-alto: 72px; }
   .cabecera-fila { padding: 0 1rem; }
-  .cabecera-logo img, .cabecera.con-fondo .cabecera-logo img { height: 50px; }
+  .cabecera-logo img, .cabecera.con-fondo .cabecera-logo img { height: 58px; }
   .cabecera.con-fondo { height: 72px; }
   .cabecera-redes a:not(.boton-fiscaliza) { display: none; }   /* en el celular solo queda el botón de Fiscaliza */
   .cabecera-redes a.boton-fiscaliza { margin-right: 0; padding: .28rem .5rem; font-size: .85rem; }
