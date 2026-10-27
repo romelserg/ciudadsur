@@ -10,6 +10,8 @@
   --tinta: #1d1b1b;
   --gris: #6b6262;
   --negro: #000;
+  --maiz: #f0cf74;          /* logo, menú y redes de la cabecera */
+  --maiz-claro: #f8e2a6;    /* al pasar el mouse */
   --cabecera-alto: 100px;
 }
 
@@ -42,24 +44,25 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
 /* Botón a Fiscaliza Cusco (observatorio del Congreso) */
 .cabecera-redes a.boton-fiscaliza {
   display: inline-flex; align-items: center; gap: .45rem; margin-right: .6rem; padding: .35rem .8rem;
-  border: 1.5px solid #fff; border-radius: 3px; font: 400 1rem/1 "Cardo", serif; color: #fff; text-decoration: none; white-space: nowrap;
+  border: 1.5px solid var(--maiz); border-radius: 3px; font: 400 1rem/1 "Cardo", serif; color: var(--maiz); text-decoration: none; white-space: nowrap;
 }
-.boton-fiscaliza svg { width: 22px; height: 13px; fill: #e9b9c1; flex: none; }
-.cabecera-redes a.boton-fiscaliza:hover { background: #fff; color: var(--borgona); }
-.boton-fiscaliza:hover svg { fill: var(--borgona); }
+.boton-fiscaliza svg { width: 22px; height: 13px; fill: var(--maiz); flex: none; }
+.cabecera-redes a.boton-fiscaliza:hover { background: var(--maiz); color: #111; }
+.boton-fiscaliza:hover svg { fill: #111; }
 .menu-lateral .offcanvas-body > a.menu-fiscaliza { color: #fff; border-left: 3px solid #e9b9c1; padding-left: .8rem; }
 .menu-fiscaliza small { display: block; font: 400 .8rem/1.3 "Open Sans", sans-serif; color: #bbb; }
 .cabecera-redes a, .menu-redes a, .pie-redes a {
   color: #fff; font-size: 1.15rem; padding: .4rem .55rem;
 }
-.cabecera-redes a:hover { color: #e9b9c1; }
+.cabecera-redes a { color: var(--maiz); }
+.cabecera-redes a:hover { color: var(--maiz-claro); }
 .boton-menu {
-  background: none; border: 0; color: #fff;
+  background: none; border: 0; color: var(--maiz);
   font-family: "Cardo", serif; font-size: 1.35rem;
   display: inline-flex; align-items: center; gap: .4rem;
 }
 .boton-menu i { font-size: 1.8rem; }
-.boton-menu:hover { color: #e9b9c1; }
+.boton-menu:hover { color: var(--maiz-claro); }
 
 /* ---------- Menú lateral ---------- */
 .menu-lateral { background: #111; color: #fff; width: 280px !important; }
@@ -84,20 +87,20 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
 .carrusel-texto {
   position: absolute; inset: 70px 12% 0; z-index: 2;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; color: #fff;
+  text-align: center; color: var(--maiz);
 }
 .carrusel-texto h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 700; margin-bottom: .8rem; }
 .carrusel-texto p { font-size: 1.1rem; margin-bottom: 1.8rem; }
 .boton-borde {
   font-family: "Montserrat", sans-serif; font-weight: 500; letter-spacing: 1px;
   text-transform: uppercase; text-decoration: none;
-  color: #fff; border: 2px solid #fff; border-radius: 50px; padding: .65rem 2.2rem;
+  color: var(--maiz); border: 2px solid var(--maiz); border-radius: 50px; padding: .65rem 2.2rem;
   transition: .3s;
 }
-.boton-borde:hover { background: var(--borgona); border-color: var(--borgona); color: #fff; }
-#carrusel .carousel-control-prev, #carrusel .carousel-control-next { width: 8%; font-size: 2.4rem; color: #fff; z-index: 3; }
+.boton-borde:hover { background: var(--maiz); border-color: var(--maiz); color: #111; }
+#carrusel .carousel-control-prev, #carrusel .carousel-control-next { width: 8%; font-size: 2.4rem; color: var(--maiz); z-index: 3; }
 #carrusel .carousel-indicators { z-index: 3; }
-#carrusel .carousel-indicators [data-bs-target] { width: 11px; height: 11px; border-radius: 50%; }
+#carrusel .carousel-indicators [data-bs-target] { width: 11px; height: 11px; border-radius: 50%; background-color: var(--maiz); }
 
 /* ---------- Tarjetas de artículos ---------- */
 .bloque-tarjetas { padding: 4rem 0; }

@@ -5,6 +5,7 @@ date: 2021-07-07
 category: "Social"
 numero: 527
 image: /assets/img/articulos/rosaspata.jpg
+portada: true
 ---
 
 <div class="video"><iframe src="https://www.youtube.com/embed/Wypo4Nf9ZYE" title="Video" allowfullscreen loading="lazy"></iframe></div>

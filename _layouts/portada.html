@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-{% assign destacados = site.posts | slice: 0, site.destacados %}
+{% comment %} Los artículos con "portada: true" van primero en el carrusel; luego, los más recientes. {% endcomment %}
+{% assign fijados = site.posts | where: "portada", true %}
+{% assign recientes = site.posts | where_exp: "art", "art.portada != true" %}
+{% assign destacados = fijados | concat: recientes | slice: 0, site.destacados %}
 <section id="carrusel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
   <div class="carousel-indicators">
     {% for art in destacados %}

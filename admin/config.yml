@@ -55,6 +55,12 @@ collections:
         name: category
         widget: select
         options: [Actualidad, Social, Arte & Cultura, Proyectos Especiales]
+      - label: Fijar primero en la portada
+        name: portada
+        widget: boolean
+        default: false
+        required: false
+        hint: Si lo activas, este artículo aparece primero en el carrusel de la portada, aunque haya otros más recientes.
       - label: Foto de portada
         name: image
         widget: image
