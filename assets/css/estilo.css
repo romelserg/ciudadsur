@@ -38,7 +38,17 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
 }
 .cabecera-logo img { height: 74px; width: auto; transition: height .4s; }
 .cabecera.con-fondo .cabecera-logo img { height: 60px; }
-.cabecera-redes { justify-self: end; }
+.cabecera-redes { justify-self: end; display: flex; align-items: center; gap: .2rem; }
+/* Botón a Fiscaliza Cusco (observatorio del Congreso) */
+.cabecera-redes a.boton-fiscaliza {
+  display: inline-flex; align-items: center; gap: .45rem; margin-right: .6rem; padding: .35rem .8rem;
+  border: 1.5px solid #fff; border-radius: 3px; font: 400 1rem/1 "Cardo", serif; color: #fff; text-decoration: none; white-space: nowrap;
+}
+.boton-fiscaliza svg { width: 22px; height: 13px; fill: #e9b9c1; flex: none; }
+.cabecera-redes a.boton-fiscaliza:hover { background: #fff; color: var(--borgona); }
+.boton-fiscaliza:hover svg { fill: var(--borgona); }
+.menu-lateral .offcanvas-body > a.menu-fiscaliza { color: #fff; border-left: 3px solid #e9b9c1; padding-left: .8rem; }
+.menu-fiscaliza small { display: block; font: 400 .8rem/1.3 "Open Sans", sans-serif; color: #bbb; }
 .cabecera-redes a, .menu-redes a, .pie-redes a {
   color: #fff; font-size: 1.15rem; padding: .4rem .55rem;
 }
@@ -235,7 +245,10 @@ h1, h2, h3, .cardo { font-family: "Cardo", serif; }
   .cabecera-fila { padding: 0 1rem; }
   .cabecera-logo img, .cabecera.con-fondo .cabecera-logo img { height: 50px; }
   .cabecera.con-fondo { height: 72px; }
-  .cabecera-redes { display: none; }
+  .cabecera-redes a:not(.boton-fiscaliza) { display: none; }   /* en el celular solo queda el botón de Fiscaliza */
+  .cabecera-redes a.boton-fiscaliza { margin-right: 0; padding: .28rem .5rem; font-size: .85rem; }
+  .boton-fiscaliza svg { display: none; }
+  .bf-largo { display: none; }
   .boton-menu span { display: none; }
   .carrusel-texto { inset: 72px 10% 0; }
   .tarjeta { min-height: 260px; }

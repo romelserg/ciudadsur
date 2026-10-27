@@ -9,6 +9,10 @@
       <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
     </a>
     <div class="cabecera-lado cabecera-redes">
+      <a class="boton-fiscaliza" href="https://fiscaliza.ciudadsur.pe" title="Fiscaliza Cusco: observatorio ciudadano del Congreso">
+        <svg viewBox="0 0 24 14" aria-hidden="true"><circle cx="3" cy="12" r="2"/><circle cx="6" cy="6.5" r="2"/><circle cx="12" cy="3.5" r="2"/><circle cx="18" cy="6.5" r="2"/><circle cx="21" cy="12" r="2"/><circle cx="9" cy="11.5" r="1.7"/><circle cx="15" cy="11.5" r="1.7"/></svg>
+        <span>Fiscaliza<span class="bf-largo"> Cusco</span></span>
+      </a>
       {% include redes.html %}
     </div>
   </div>
@@ -24,6 +28,7 @@
       <a href="{{ seccion.url | relative_url }}">{{ seccion.nombre }}</a>
     {% endfor %}
     <a href="{{ '/colabora' | relative_url }}">Colabora con Nosotros</a>
+    <a class="menu-fiscaliza" href="https://fiscaliza.ciudadsur.pe">Fiscaliza Cusco <small>Observatorio ciudadano del Congreso</small></a>
     <div class="menu-redes">{% include redes.html %}</div>
   </div>
 </nav>
