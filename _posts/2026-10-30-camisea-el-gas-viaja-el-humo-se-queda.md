@@ -1,11 +1,13 @@
 ---
-title: "Camisea: el gas viaja, el humo se queda y el Cusco espera"
-author: "Ciudad Sur"
-author_image: /assets/img/articulos/autores/ciudad-sur.png
+title: 'Camisea: el gas viaja, el humo se queda y el Cusco espera'
+author: Ciudad Sur
 date: 2026-10-30
-category: "Actualidad"
+category: Actualidad
+portada: false
 image: /assets/img/articulos/camisea-el-gas-viaja-el-humo-se-queda.jpg
-image_caption: "Izquierda: hornilla de gas natural (foto referencial, dominio público). Derecha: cocina de leña en Acora, Puno (foto referencial, TeshTesh, CC BY-SA 4.0). Wikimedia Commons."
+image_caption: 'Izquierda: hornilla de gas natural (foto referencial, dominio público). Derecha: cocina de leña en Acora, Puno (foto referencial, TeshTesh, CC BY-SA 4.0). Wikimedia Commons.'
+author_image: /assets/img/articulos/autores/ciudad-sur.png
+numero: null
 ---
 
 <style>
@@ -160,11 +162,11 @@ El gas viaja. El humo se queda. Y el Cusco espera.
 
 La próxima decisión, la adenda de Cálidda, se tomará en Lima en las próximas semanas. Las preguntas son las mismas de hace 22 años: ¿hasta cuándo decidirán en Lima por nosotros? ¿Y qué hacen nuestros congresistas al respecto?
 
----
+***
 
 **Metodología.** Las cifras de hogares son del censo nacional de 2025 del INEI (base REDATAM CPV2025DI, a nivel de distrito, hogares censados). La pregunta del censo es «¿qué energía o combustible utiliza para cocinar?» y admite más de una respuesta. «Gas natural» corresponde a la opción «gas natural (sistema de tuberías)». Los distritos del corredor son los que el trazado de los ductos de Camisea en OpenStreetMap cruza o toca a 500 metros o menos. Los precios del balón en zonas urbanas son medianas del registro PRICE de Osinergmin (enero y febrero de 2026); los de las comunidades amazónicas vienen de la prensa.
 
-*Esta nota acompaña un video y un carrusel publicados en las redes de Siete Borreguitos y Ciudad Sur.*
+*Esta nota acompaña un video y un carrusel publicados en las redes de @*[_sieteborreguitos_](https://www.instagram.com/reel/DfIIlM-h8Aw/?utm_source=ig_web_copy_link&xtok=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==) *y @*[_ciudasur_](https://www.instagram.com/ciudad.sur/)*.*
 
 <script>
 (function () {
