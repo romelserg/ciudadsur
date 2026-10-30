@@ -1,6 +1,7 @@
 ---
 title: "Camisea: el gas viaja, el humo se queda y el Cusco espera"
-author: "Siete Borreguitos"
+author: "Ciudad Sur"
+author_image: /assets/img/articulos/autores/ciudad-sur.png
 date: 2026-10-30
 category: "Actualidad"
 image: /assets/img/articulos/camisea-el-gas-viaja-el-humo-se-queda.jpg
