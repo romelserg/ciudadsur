@@ -5,8 +5,8 @@ layout: default
 <article class="articulo">
   <header class="articulo-cabecera">
     <span class="articulo-numero">
-      Ciudad Sur{% if page.numero %} Nº {{ page.numero }}{% endif %} · {{ page.date | date: "%d/%m/%Y" }}
-      {% if seccion %} · <a href="{{ seccion.url | relative_url }}">{{ page.category }}</a>{% endif %}
+      Ciudad Sur{% if page.numero %} Nº {{ page.numero }}{% endif %} - {{ page.date | date: "%d/%m/%Y" }}
+      {% if seccion %} - <a href="{{ seccion.url | relative_url }}">{{ page.category }}</a>{% endif %}
     </span>
     <h1>{{ page.title }}</h1>
     <div class="linea-vertical"></div>
