@@ -4,6 +4,7 @@ author: "Ciudad Sur"
 author_image: /assets/img/articulos/autores/ciudad-sur.png
 date: 2026-11-04
 category: "Actualidad"
+portada: true
 image: /assets/img/articulos/palestinos-y-judios-en-el-cusco.jpg
 image_caption: "El Cristo Blanco en 1945, regalo de la comunidad palestina al Cusco."
 ---
