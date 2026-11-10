@@ -175,6 +175,38 @@ El censo de 2025 preguntó dónde vivía cada persona cinco años antes. De quie
 
 Una parte se mudó a la periferia de la misma ciudad: San Sebastián (3 149), Wanchaq (2 131), Santiago (1 889), San Jerónimo (1 450) y Poroy (1 222). Pero la mayoría salió de la provincia, sobre todo hacia Lima, Arequipa y Madre de Dios. El censo dice dónde vive la gente, no por qué se mudó: entre quienes se fueron hay también estudiantes, trabajadores y personas que volvieron a su tierra.
 
+## ¿Quiénes se fueron?
+
+Si se mira la población por edad, la pérdida tiene un rostro claro: **jóvenes y niños**. Entre 2017 y 2025, el Cercado perdió 9 292 personas de 15 a 29 años (−28 %) y 2 974 niños de 5 a 14 (−17 %). Las personas de 60 años o más, en cambio, aumentaron 16 %. En San Sebastián y San Jerónimo, los distritos que reciben a quienes se van, los jóvenes se mantienen y los niños en edad escolar crecen.
+
+<div class="cs-graf" id="graf-edad">
+  <h4>¿Quiénes se fueron del Cercado?</h4>
+  <p class="cs-sub">Cambio de población por grupo de edad entre 2017 y 2025.</p>
+  <div class="cs-leyenda"><span style="--c:#671b27">Cercado de Cusco</span><span style="--c:#1f6fa3">San Sebastián y San Jerónimo</span></div>
+  <div class="cs-filas cs-div"></div>
+  <p class="cs-fuente">Fuente: INEI, censos 2017 (C5P41) y 2025 (S5_P3), población por edad simple. Elaboración propia.</p>
+</div>
+
+La caída de niños de 0 a 4 años ocurre en toda la ciudad (y en todo el país), porque nacen menos niños; no es propia del centro. Lo propio del Cercado es la salida de jóvenes en edad de formar un hogar y de familias con hijos en edad escolar. Una parte de esos jóvenes pueden ser estudiantes universitarios que en 2017 vivían cerca de sus universidades y en 2025 ya no; el censo no permite distinguirlos.
+
+## Otras explicaciones posibles
+
+Un análisis serio no solo muestra lo que encaja. Estas son las explicaciones alternativas que revisamos:
+
+- **La ciudad crece hacia afuera.** Con imágenes satelitales (cobertura del suelo de Esri e Impact Observatory, 10 metros por píxel) medimos el suelo construido dentro del Cercado. Entre 2017 y 2025 se sumaron unas 367 hectáreas construidas, pero solo 4 están a menos de un kilómetro de la Plaza de Armas: el 64 % está a más de tres kilómetros. La vivienda nueva, y más barata, está en la periferia. Esto puede explicar parte de la mudanza con o sin turismo, y probablemente ambas cosas se refuerzan.
+- **Menos nacimientos y hogares más pequeños.** Pasa en todo el país. Por eso comparamos el Cercado con los demás distritos urbanos: los hogares del Cusco crecieron mucho menos que la mediana (8 % frente a 24 %).
+- **La pandemia.** Entre 2020 y 2021 el turismo se detuvo y muchas familias que vivían de él pudieron mudarse o volver a sus provincias. El censo de 2025 no permite separar este golpe del resto.
+- **El cambio de método del censo.** Lo descartamos para la población (ver arriba), pero puede inflar el aumento de viviendas vacías, porque el censo de 2025 duró casi tres meses y el de 2017 un solo día.
+
+## ¿Conviene más alquilar a turistas?
+
+La literatura sobre gentrificación turística sostiene que el alquiler temporal desplaza a los vecinos porque un inmueble rinde más alquilado por noches que a una familia: lo que se llama «brecha de renta» (Wachsmuth y Weisler, 2018). Quisimos medirla para el Cusco y encontramos menos datos de los que esperábamos.
+
+- **Alquiler a familias.** En los dos portales inmobiliarios más grandes del país, Urbania y Adondevivir, había solo 23 avisos de alquiler de cualquier tipo en la provincia del Cusco el 10 de noviembre de 2026. Un departamento amoblado de dos dormitorios y 80 m² se ofrece en S/ 1 700 a 2 500 al mes en Wanchaq y el Cercado; uno sin amoblar de tres dormitorios, en S/ 1 100 a 1 200 en San Sebastián. Son muy pocos avisos para calcular un precio típico: el alquiler cusqueño se mueve sobre todo en redes sociales y de boca en boca.
+- **Ingreso en Airbnb.** Las estimaciones públicas de ingresos de Airbnb para el Cusco vienen de empresas privadas que modelan reservas, y no coinciden entre sí; no permiten calcular cuánto gana un departamento típico. Sí dan tres datos útiles: la ocupación media ronda el 48 %, los anuncios cerca del Centro histórico cobran alrededor de 49 % más por noche que el promedio de la ciudad, y **menos del 1 % de los anuncios muestra una licencia** de alquiler de corta estancia (Airbtics, octubre de 2026).
+
+Con datos públicos, entonces, no podemos medir la brecha de renta en el Cusco. Pero hay una señal llamativa: dos avisos de San Blas ofrecen departamentos amoblados en S/ 2 000 al mes **«exclusivo para personas interesadas en trabajar la propiedad como Airbnb»**. Es decir, hay quien alquila a largo plazo para subarrendar a turistas, porque espera ganar más que eso.
+
 ## Cuánto explica el turismo
 
 Dos cálculos independientes acotan el efecto del alquiler turístico:
@@ -191,11 +223,32 @@ Dos cálculos independientes acotan el efecto del alquiler turístico:
 
 **El alquiler turístico explica entre un sexto y un tercio de la caída.** El resto viene de hogares cada vez más pequeños, de familias que se mudan a la periferia o a otras regiones, de viviendas que quedaron en venta, en obras o cerradas, y de golpes que solo sufrió el Cusco, como la pandemia en una economía que vive del turismo.
 
+## Qué dicen las normas
+
+- **El Plan Maestro del Centro Histórico** (Ordenanzas Municipales 24 y 25 de 2018 de la Municipalidad Provincial del Cusco) regula alturas, volúmenes y usos en el centro. Toda obra nueva o remodelación necesita, para su licencia, la opinión favorable del delegado del Ministerio de Cultura. Construir vivienda nueva en el centro es, por eso, más difícil y lento; convertir una existente en alojamiento turístico, en cambio, no requiere obras.
+- **No hay una norma nacional sobre el alquiler temporal de viviendas.** Un dictamen que acumula los proyectos de ley 5467/2022, 9084/2024 y 9362/2024 propone crear un Registro Digital del Arrendamiento Turístico a cargo del MINCETUR; fue aprobado en las comisiones de Defensa del Consumidor (diciembre de 2024) y de Comercio Exterior y Turismo. Hasta donde pudimos verificar, no ha sido aprobado por el Pleno. La Nueva Ley General de Turismo (Ley 32392) y su reglamento de enero de 2026 tampoco lo regulan de forma específica.
+- **No encontramos una ordenanza del Cusco** sobre alquiler temporal de viviendas. Una vivienda del centro puede pasar a recibir turistas sin un registro propio, aunque en principio debería contar con licencia de funcionamiento como hospedaje. Es información que corresponde pedir a la Municipalidad Provincial del Cusco.
+
 ## Lo que está en juego
 
 Las piezas encajan en el tiempo y en el espacio. El Cusco crecía; cayó después de 2017 más que casi cualquier otro distrito urbano del país; el Airbnb del Cercado se multiplicó justo en ese periodo; y los distritos con más alquiler turístico y más hoteles son los que más habitantes perdieron. Los colegios del centro empezaron a vaciarse antes, desde 2015, cuando lo que crecía era el turismo en general.
 
-El Centro histórico pierde vecinos y gana usos turísticos. Es la primera señal de un proceso de gentrificación turística: no necesariamente desalojos, sino una presión lenta que hace que quedarse sea cada vez más difícil y que las familias jóvenes ya no lleguen. Lo que falta medir es el precio del alquiler residencial y del suelo, y el papel de las normas: cómo se licencian y tributan las viviendas que funcionan como hospedaje, y qué permite el Plan Maestro del Centro Histórico. Son las siguientes preguntas de este laboratorio.
+Los estudios urbanos llaman **gentrificación turística** a la transformación de un barrio cuando el turismo reemplaza a la vida residencial: suben los usos para visitantes y bajan los vecinos (Gotham, 2005). En los centros históricos europeos, el alquiler vacacional se volvió el principal frente de ese proceso (Cócola-Gant, 2016). Y el desplazamiento no siempre es un desalojo: también es «excluyente», cuando las familias nuevas ya no pueden llegar, o es una «presión» que hace cada vez más difícil quedarse (Marcuse, 1985).
+
+Lo que vemos en el Cercado se parece más a esas dos últimas formas: los que más se van son los jóvenes en edad de formar un hogar y las familias con niños, mientras crece la población mayor. Es la primera señal de un proceso de gentrificación turística, no su prueba final.
+
+<div class="cs-graf">
+  <h4>Lo que todavía no sabemos</h4>
+  <ul class="cs-limites" style="font-size:.88rem;margin:.6rem 0 0;padding-left:1.1rem">
+    <li>Si los alquileres residenciales del centro subieron, y cuánto. No hay datos públicos suficientes.</li>
+    <li>Quién convierte las viviendas en alojamiento turístico: inversionistas de fuera o los propios dueños cusqueños que se mudan a la periferia.</li>
+    <li>Por qué se mudó cada familia. El censo dice dónde vive la gente, no por qué se fue.</li>
+    <li>Cuántos de los jóvenes que se fueron eran estudiantes universitarios.</li>
+    <li>Qué pasa dentro del Centro histórico, porque el censo solo llega al distrito.</li>
+  </ul>
+</div>
+
+Responderlas requiere información que solo tienen la Municipalidad Provincial del Cusco y el INEI, y trabajo de campo. Son las siguientes preguntas de este laboratorio. Los datos y el método de esta nota están en el [anexo metodológico](/metodologia/cusco-sin-cusquenos), con tablas descargables.
 
 ***
 
@@ -208,9 +261,12 @@ El Centro histórico pierde vecinos y gana usos turísticos. Es la primera seña
 <li>El censo de 2017 se hizo en un día y el de 2025 duró casi tres meses. Si el segundo encontró mejor las viviendas vacías, parte del aumento sería de método.</li>
 <li>Los colegios del centro reciben alumnos de toda la ciudad, así que su matrícula no mide solo a los vecinos. Airbnb y hoteles se concentran en las mismas cuadras, y con los colegios no se puede separar el efecto de uno y otro.</li>
 <li>La fecha de cada anuncio se estima a partir de su número; los anuncios dados de baja ya no se ven.</li>
+<li>Los indicadores del mercado de Airbnb son estimaciones de una empresa privada, no reservas reales, y hay muy pocos avisos públicos de alquiler residencial en el Cusco.</li>
 </ul>
 
-**Fuentes.** INEI, Censos Nacionales 1993, 2007, 2017 y 2025 (REDATAM), procesados por distrito. MINEDU, Censo Educativo 2009-2025 (ESCALE). Anuncios de Airbnb descargados el 28 de octubre de 2026. Inside Airbnb (Santiago, Ciudad de México y Río de Janeiro, septiembre de 2026). Airbtics, anuncios activos en Cusco a octubre de 2026. MINCETUR, Directorio Nacional de Prestadores de Servicios Turísticos. Límites distritales del INEI.
+**Fuentes.** INEI, Censos Nacionales 1993, 2007, 2017 y 2025 (REDATAM), procesados por distrito. MINEDU, Censo Educativo 2009-2025 (ESCALE). Anuncios de Airbnb descargados el 28 de octubre de 2026. Inside Airbnb (Santiago, Ciudad de México y Río de Janeiro, septiembre de 2026). [Airbtics](https://airbtics.com/annual-airbnb-revenue-in-cusco-peru-es), indicadores del mercado de Airbnb en el Cusco (actualizados al 16 de octubre de 2026). Avisos de alquiler de [Urbania](https://urbania.pe/buscar/alquiler-de-propiedades-en-cusco--cusco) y [Adondevivir](https://www.adondevivir.com/departamentos-en-alquiler-en-cusco.html) (10 de noviembre de 2026). Esri e Impact Observatory, cobertura del suelo anual de 10 metros. MINCETUR, Directorio Nacional de Prestadores de Servicios Turísticos. Congreso de la República, [dictamen sobre arrendamiento turístico](https://comunicaciones.congreso.gob.pe/?p=374328). Límites distritales del INEI. Método completo y datos: [anexo metodológico](/metodologia/cusco-sin-cusquenos).
+
+**Referencias.** Cócola-Gant, A. (2016). Holiday rentals: The new gentrification battlefront. *Sociological Research Online*, 21(3). Gotham, K. F. (2005). Tourism gentrification: The case of New Orleans' Vieux Carré. *Urban Studies*, 42(7), 1099-1121. Marcuse, P. (1985). Gentrification, abandonment, and displacement. *Journal of Urban and Contemporary Law*, 28, 195-240. Wachsmuth, D. y Weisler, A. (2018). Airbnb and the rent gap: Gentrification through the sharing economy. *Environment and Planning A*, 50(6), 1147-1170.
 
 *Esta nota acompaña el video y el carrusel «Lo lograron: Cusco sin cusqueños», publicados en las redes de* [_@ciudad.sur_](https://www.instagram.com/ciudad.sur/). *Ciudad Sur, Laboratorio urbano del Cusco.*
 
@@ -345,6 +401,16 @@ El Centro histórico pierde vecinos y gana usos turísticos. Es la primera seña
     x0: 2009, x1: 2025, y0: 90, y1: 150, xt: [2009, 2012, 2015, 2018, 2021, 2025], yt: [90, 100, 110, 120, 130, 140, 150],
     series: [{ c: AZUL, pts: zip(baja), fin: "+49 %", dyfin: -4 }, { c: OCRE, pts: zip(media), fin: "+42 %", dyfin: 8 }, { c: BORD, w: 3.5, pts: zip(alta), fin: "+14 %" }]
   });
+
+  // 7b. población por edad
+  var E = [["0 a 4 años", -43.3, -25.7], ["5 a 14", -16.9, 8.6], ["15 a 29", -28.3, -0.3], ["30 a 44", -13.0, 19.9], ["45 a 59", -3.4, 35.5], ["60 o más", 16.3, 58.7]];
+  var fe = [];
+  E.forEach(function (r, i) {
+    var t = function (v) { return (v < 0 ? "−" : "+") + dec(Math.abs(v)) + " %"; };
+    fe.push({ et: r[0], v: r[1], txt: t(r[1]), c: BORD, sep: i > 0 });
+    fe.push({ et: "", v: r[2], txt: t(r[2]), c: AZUL });
+  });
+  pintar(document.getElementById("graf-edad"), fe, 58.7, { div: true });
 
   // 8. destinos
   var D = [["Resto de la provincia de Cusco", 10008], ["Resto de la región Cusco", 6497], ["Lima y Callao", 6177], ["Arequipa", 4718], ["Madre de Dios", 2250], ["Otras regiones", 5823]];
