@@ -86,22 +86,6 @@ El Cercado no es el único centro urbano que pierde gente: varios cercados de ca
   <p class="cs-fuente">Fuente: INEI, censos 2017 y 2025. Población 2017 de residentes habituales; 2025, población censada. Elaboración propia.</p>
 </div>
 
-## Lo que habría pasado sin el cambio
-
-Para saber si la caída es propia del Cusco o le pasó a todas las ciudades, construimos un **Cusco de comparación**: una mezcla de otras capitales de provincia que reproduce la trayectoria del Cercado antes de 2017. La mezcla que mejor lo hace combina Chachapoyas (32 %), Lima (27 %), Chepén (24 %) y Puno (17 %). Hasta 2017, las dos líneas casi coinciden. Después se separan: la comparación habría seguido creciendo y el Cusco cayó.
-
-<div class="cs-graf" id="graf-sint">
-  <h4>El Cusco que fue y el que habría sido</h4>
-  <p class="cs-sub">Población del Cercado de Cusco y de su comparación, con 2017 = 100.</p>
-  <div class="cs-leyenda"><span class="linea" style="--c:#671b27">Cercado de Cusco</span><span class="linea" style="--c:#1f6fa3">Cusco de comparación</span></div>
-  <div class="cs-graf-svg"></div>
-  <p class="cs-fuente">Método de control sintético con 25 capitales de provincia cuyos distritos no cambiaron de límites desde 1993. Fuente: INEI, censos 1993-2025. Elaboración propia.</p>
-</div>
-
-La diferencia equivale a **unas 24 500 personas** que hoy deberían vivir en el Cercado y no viven. Repetimos el mismo ejercicio para cada una de las 26 ciudades: el Cusco tiene la mayor caída frente a lo esperado (−21 puntos), seguido de Puno, Huaraz y Pariñas (alrededor de −17). Si se quita de la mezcla una ciudad a la vez, la brecha del Cusco se mueve entre −16 y −28 puntos, pero nunca desaparece.
-
-Hay que leer bien este resultado: el Cusco de comparación mide **todo lo que le pasó solo al Cusco** en esos años, no únicamente el turismo. La pandemia, por ejemplo, golpeó más a una ciudad que vive de los visitantes.
-
 ## Más viviendas, menos vecinos
 
 Las viviendas particulares del Cercado pasaron de 29 851 a 42 355 (+42 %). Ese aumento, por sí solo, no es raro: en todo el país las viviendas crecieron 36 % entre los dos censos, en parte porque el censo de 2025 las contó de forma más fina. Una casona dividida en varios departamentos con entrada propia suma varias viviendas sin que se haya construido nada.
@@ -209,7 +193,7 @@ Dos cálculos independientes acotan el efecto del alquiler turístico:
 
 ## Lo que está en juego
 
-Las piezas encajan en el tiempo y en el espacio. El Cusco crecía; cayó después de 2017 más que cualquier ciudad comparable; el Airbnb del Cercado se multiplicó justo en ese periodo; y los distritos con más alquiler turístico y más hoteles son los que más habitantes perdieron. Los colegios del centro empezaron a vaciarse antes, desde 2015, cuando lo que crecía era el turismo en general.
+Las piezas encajan en el tiempo y en el espacio. El Cusco crecía; cayó después de 2017 más que casi cualquier otro distrito urbano del país; el Airbnb del Cercado se multiplicó justo en ese periodo; y los distritos con más alquiler turístico y más hoteles son los que más habitantes perdieron. Los colegios del centro empezaron a vaciarse antes, desde 2015, cuando lo que crecía era el turismo en general.
 
 El Centro histórico pierde vecinos y gana usos turísticos. Es la primera señal de un proceso de gentrificación turística: no necesariamente desalojos, sino una presión lenta que hace que quedarse sea cada vez más difícil y que las familias jóvenes ya no lleguen. Lo que falta medir es el precio del alquiler residencial y del suelo, y el papel de las normas: cómo se licencian y tributan las viviendas que funcionan como hospedaje, y qué permite el Plan Maestro del Centro Histórico. Son las siguientes preguntas de este laboratorio.
 
@@ -322,14 +306,6 @@ El Centro histórico pierde vecinos y gana usos turísticos. Es la primera seña
     var cus = r[0] === "Cercado de Cusco";
     return { et: r[0], v: -r[1], txt: "−" + dec(-r[1]) + " %", c: cus ? BORD : GRIS, dest: cus };
   }), 21.8);
-
-  // 3. control sintético
-  lineas(document.getElementById("graf-sint"), {
-    aria: "Con 2017 = 100, en 2025 el Cercado de Cusco quedó en 84,4 y su comparación en 105,7.",
-    x0: 1993, x1: 2025, y0: 78, y1: 110, xt: [1993, 2007, 2017, 2025], yt: [80, 90, 100, 110], vlinea: 2017, vtexto: "2017",
-    series: [{ c: AZUL, w: 3, pts: [[1993, 82.0], [2007, 94.4], [2017, 100], [2025, 105.7]], fin: "Comparación 105,7" },
-             { c: BORD, w: 3.5, pts: [[1993, 81.3], [2007, 95.0], [2017, 100], [2025, 84.4]], fin: "Cusco 84,4" }]
-  });
 
   // 4. condición de ocupación
   var V = [["Con residentes presentes", 26172, 32716], ["Con residentes ausentes", 1603, 1036], ["De uso ocasional", 523, 4163],
