@@ -49,6 +49,13 @@ numero: null
 .cs-tabla tr.cs-dest td { color: #671b27; font-weight: 700; }
 .cs-scroll { overflow-x: auto; }
 .cs-limites li { margin-bottom: .45rem; }
+.cs-casas-fila { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; margin: .8rem 0 .6rem; }
+.cs-casas-fila svg { width: 100%; height: auto; image-rendering: pixelated; opacity: 0; transform: translateY(6px); transition: opacity .35s, transform .35s; }
+.cs-graf.visto .cs-casas-fila svg { opacity: 1; transform: none; }
+.cs-casas-pie { display: flex; justify-content: space-between; gap: 1rem; font-size: .85rem; margin: 0; text-align: left !important; }
+.cs-casas-pie .luz { color: #8a5a12; font-weight: 700; }
+.cs-casas-pie .osc { color: #4b2a30; font-weight: 700; text-align: right; }
+@media (max-width: 576px) { .cs-casas-fila { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 @media (max-width: 576px) { .cs-fila { grid-template-columns: 7.2rem 1fr; font-size: .78rem; } .cs-graf { padding: 1.1rem .8rem .8rem; } }
 @media (prefers-reduced-motion: reduce) { .cs-fila .cs-barra, .cs-fila .cs-rango, .cs-fila .cs-val, .cs-svg .cs-trazo, .cs-svg .cs-tarde { transition: none; } }
 </style>
@@ -68,7 +75,15 @@ En el mismo periodo, el distrito sumó 12 500 viviendas. Hay más casas y menos 
 
 ## Una caída que no es del método
 
-La primera sospecha razonable es que la caída sea un artefacto del censo. El de 2017 contó a quien estaba en el distrito el día del censo, turistas incluidos. El de 2025 contó a quien vive ahí de forma habitual. Para comparar lo mismo con lo mismo, rehicimos la cifra de 2017 con la pregunta «¿vive permanentemente en este distrito?». El resultado, 114 691 residentes, es casi idéntico a los 114 630 contados ese día: los visitantes presentes y los vecinos ausentes se compensaban. La pérdida es real.
+La primera sospecha razonable es que la caída sea un efecto del cambio de método. El censo de 2017 contó a todas las personas que estaban en el distrito el día del censo, el 22 de octubre, turistas incluidos. El de 2025 contó solo a quienes viven ahí de forma habitual. Comparar las dos cifras directamente sería comparar cosas distintas.
+
+Para corregirlo usamos una pregunta que el censo de 2017 hizo a todas las personas del país: en qué distrito viven de forma permanente. Así se puede contar a los vecinos del Cercado estuvieran donde estuvieran ese día:
+
+- Ese 22 de octubre había **114 630 personas** en el Cercado. De ellas, 104 815 vivían ahí y **9 815 eran de paso**: turistas, visitantes o gente de otros distritos.
+- En otros distritos del país se censó a **9 876 vecinos del Cercado** que ese día no estaban en casa.
+- Sumando quienes vivían en el Cercado y estaban ahí (104 815) y quienes vivían ahí pero estaban fuera (9 876), los residentes del Cercado en 2017 eran **114 691**.
+
+Los visitantes y los vecinos ausentes casi se cancelaron, así que la cifra de residentes de 2017 es casi la misma que la del día del censo. Comparada con los 96 746 residentes de 2025, la pérdida es real y no un efecto del método.
 
 <div class="cs-graf" id="graf-pob">
   <h4>Treinta años de población del Cercado de Cusco</h4>
@@ -91,6 +106,13 @@ El Cercado no es el único centro urbano que pierde gente: varios cercados de ca
 Las viviendas particulares del Cercado pasaron de 29 851 a 42 355 (+42 %). Ese aumento, por sí solo, no es raro: en todo el país las viviendas crecieron 36 % entre los dos censos, en parte porque el censo de 2025 las contó de forma más fina. Una casona dividida en varios departamentos con entrada propia suma varias viviendas sin que se haya construido nada.
 
 Lo que distingue al Cusco está en otra parte. Los hogares crecieron apenas 8 % (frente a una mediana urbana de 24 %; solo siete distritos sumaron menos), y en cada hogar vive menos gente: de 3,7 a 2,9 personas. Y, sobre todo, **la mitad de las viviendas nuevas no tiene residentes permanentes**.
+
+<div class="cs-graf cs-casas">
+  <h4>De cada 10 viviendas nuevas del Cercado…</h4>
+  <div class="cs-casas-fila" aria-label="Cinco casas con las ventanas iluminadas y cinco a oscuras"></div>
+  <p class="cs-casas-pie"><span class="luz">5 tienen a alguien viviendo</span> <span class="osc">5 no tienen residentes permanentes</span></p>
+  <p class="cs-fuente">Entre 2017 y 2025 el Cercado sumó unas 12 500 viviendas; 5 977 más tienen residentes y el resto son de uso ocasional (3 640), están cerradas o en obra (1 716) o en alquiler o venta (1 167). Fuente: INEI, censos 2017 y 2025. Ilustración: Ciudad Sur.</p>
+</div>
 
 <div class="cs-graf" id="graf-viv">
   <h4>¿Qué pasó con las 12 500 viviendas nuevas?</h4>
@@ -411,6 +433,21 @@ Responderlas requiere información que solo tienen la Municipalidad Provincial d
     fe.push({ et: "", v: r[2], txt: t(r[2]), c: AZUL });
   });
   pintar(document.getElementById("graf-edad"), fe, 58.7, { div: true });
+
+  // casas en pixel art: 5 iluminadas y 5 a oscuras (el mismo dibujo del reel)
+  var CASA = ["......OOOO......", "....OOTTTTOO....", "..OOTTtTTtTTOO..", "OOTTtTTtTTtTTtOO", "OTTTTTTTTTTTTTTO", "OOOOOOOOOOOOOOOO",
+              ".OWWWWWWWWWWWWO.", ".OWXXWWWWWWXXWO.", ".OWXXWWWWWWXXWO.", ".OWwwWWWWWWwwWO.", ".OWWWWWBBWWWWWO.", ".OWXXWOBbOWXXWO.",
+              ".OWXXWOBbOWXXWO.", ".OWwwWOBbOWwwWO.", ".OWWWWOBbOWWWWO.", "OOOOOOOOOOOOOOOO"];
+  function casa(luz) {
+    var P = { O: "#2d0c12", T: "#c4543a", t: "#963a28", W: "#f6eee2", w: "#d6c8ba", B: "#3462aa", b: "#24467f", X: luz ? "#f0cf74" : "#46181f" };
+    var r = '<svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">';
+    CASA.forEach(function (f, y) { for (var x = 0; x < f.length; x++) { var c = f[x]; if (c !== ".") r += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + P[c] + '"/>'; } });
+    return r + "</svg>";
+  }
+  document.querySelectorAll(".cs-casas-fila").forEach(function (fila) {
+    var h = ""; for (var i = 0; i < 10; i++) h += casa(i < 5); fila.innerHTML = h;
+    fila.querySelectorAll("svg").forEach(function (s, i) { s.style.transitionDelay = (i * 0.12) + "s"; });
+  });
 
   // 8. destinos
   var D = [["Resto de la provincia de Cusco", 10008], ["Resto de la región Cusco", 6497], ["Lima y Callao", 6177], ["Arequipa", 4718], ["Madre de Dios", 2250], ["Otras regiones", 5823]];
