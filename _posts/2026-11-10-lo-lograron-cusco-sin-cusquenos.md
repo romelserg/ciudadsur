@@ -56,6 +56,10 @@ numero: null
 .cs-casas-pie { display: flex; justify-content: space-between; gap: 1rem; font-size: .85rem; margin: 0; text-align: left !important; }
 .cs-casas-pie .luz { color: #8a5a12; font-weight: 700; }
 .cs-casas-pie .osc { color: #4b2a30; font-weight: 700; text-align: right; }
+.cs-iconos { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: 1.4rem 1.2rem; margin: 2.2rem 0; padding: 1.4rem 0; border-top: 1px solid #d8cfc9; border-bottom: 1px solid #d8cfc9; }
+.cs-iconos svg { width: 44px; height: 44px; display: block; margin-bottom: .55rem; }
+.cs-iconos strong { display: block; font-family: "Cardo", serif; font-weight: 400; font-size: 1.85rem; line-height: 1.05; color: #671b27; white-space: nowrap; }
+.cs-iconos span { display: block; font-family: "Montserrat", sans-serif; font-size: .84rem; line-height: 1.4; color: #4b4242; margin-top: .3rem; }
 @media (max-width: 576px) { .cs-casas-fila { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 @media (max-width: 576px) { .cs-fila { grid-template-columns: 7.2rem 1fr; font-size: .78rem; } .cs-graf { padding: 1.1rem .8rem .8rem; } }
 @media (prefers-reduced-motion: reduce) { .cs-fila .cs-barra, .cs-fila .cs-rango, .cs-fila .cs-val, .cs-svg .cs-trazo, .cs-svg .cs-tarde { transition: none; } }
@@ -67,11 +71,12 @@ Durante 24 años, el Cercado de Cusco creció. Pasó de 93 187 habitantes en 199
 
 En el mismo periodo, el distrito sumó 12 500 viviendas. Hay más casas y menos gente. Esta nota intenta explicar esa contradicción con datos públicos, y también dice hasta dónde llegan esos datos.
 
-<div class="cs-cifras">
-  <div><strong>−17 945</strong><span>habitantes en el Cercado de Cusco entre 2017 y 2025 (−15,6 %)</span></div>
-  <div style="--c:#8a5a12"><strong>1 de cada 2</strong><span>viviendas nuevas no tiene a nadie viviendo de forma permanente</span></div>
-  <div style="--c:#1f6fa3"><strong>3 150</strong><span>anuncios de Airbnb en el distrito; 1 499 son casas o departamentos enteros</span></div>
-  <div style="--c:#5b4a3f"><strong>−21 %</strong><span>niños y adolescentes de 3 a 16 años en el Cercado</span></div>
+<div class="cs-iconos" aria-label="Cifras clave">
+  <div data-ic="persona"><strong>−17 945</strong><span>vecinos menos en el Cercado en ocho años (−15,6 %)</span></div>
+  <div data-ic="casa"><strong>1 de cada 2</strong><span>viviendas nuevas, sin nadie que viva en ellas</span></div>
+  <div data-ic="llave"><strong>1 499</strong><span>casas y departamentos enteros en Airbnb</span></div>
+  <div data-ic="mochila"><strong>−21 %</strong><span>niños y adolescentes de 3 a 16 años</span></div>
+</div>
 </div>
 
 ## Una caída que no es del método
@@ -434,6 +439,20 @@ Responderlas requiere información que solo tienen la Municipalidad Provincial d
     fe.push({ et: "", v: r[2], txt: t(r[2]), c: AZUL });
   });
   pintar(document.getElementById("graf-edad"), fe, 58.7, { div: true });
+
+  // íconos en pixel art del bloque de cifras (un solo color de marca)
+  var ICONOS = {
+    persona: ["...OOOO...", "..OSSSSO..", "..OSSSSO..", "...OSSO...", ".OPPPPPPO.", "OPPPPPPPPO", "OSPPPPPPSO", "OSPPPPPPSO", ".OPPPPPPO.", "..OKKKKO..", "..OK..KO..", "..OO..OO.."],
+    casa: ["....OOOO....", "..OOPPPPOO..", "OOPPPPPPPPOO", "OOOOOOOOOOOO", ".OWWWWWWWWO.", ".OWXXWWXXWO.", ".OWXXWWXXWO.", ".OWWWPPWWWO.", ".OWXWPPWXWO.", ".OWWWPPWWWO.", "OOOOOOOOOOOO"],
+    llave: ["..OOOO......", ".OPPPPO.....", "OPP..PPO....", "OP....POOOOO", "OP....PPPPPO", "OPP..PPOOPOO", ".OPPPPO..PO.", "..OOOO...OO."],
+    mochila: ["...OOOO...", "..O....O..", ".OOOOOOOO.", ".OPPPPPPO.", ".OPOOOOPO.", ".OPPPPPPO.", ".OPPPPPPO.", ".OPOOOOPO.", ".OPPPPPPO.", ".OOOOOOOO."]
+  };
+  var PI = { O: "#2d0c12", S: "#e8c3a0", P: "#671b27", K: "#4a1520", W: "#f6eee2", X: "#46181f" };
+  document.querySelectorAll(".cs-iconos [data-ic]").forEach(function (d) {
+    var m = ICONOS[d.dataset.ic], w = m[0].length, h = m.length, r = '<svg viewBox="0 0 ' + w + " " + h + '" shape-rendering="crispEdges" aria-hidden="true">';
+    m.forEach(function (f, y) { for (var x = 0; x < w; x++) { var c = f[x]; if (c !== ".") r += '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + PI[c] + '"/>'; } });
+    d.insertAdjacentHTML("afterbegin", r + "</svg>");
+  });
 
   // casas en pixel art: 5 iluminadas y 5 a oscuras (el mismo dibujo del reel)
   var CASA = ["......OOOO......", "....OOTTTTOO....", "..OOTTtTTtTTOO..", "OOTTtTTtTTtTTtOO", "OTTTTTTTTTTTTTTO", "OOOOOOOOOOOOOOOO",
