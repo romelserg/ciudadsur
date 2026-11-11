@@ -1,5 +1,6 @@
 ---
 title: 'Lo lograron: Cusco sin cusqueños'
+subtitle: 'Más Airbnbs, menos vecinos en el Centro histórico'
 author: Ciudad Sur
 author_image: /assets/img/articulos/autores/ciudad-sur.png
 date: 2026-11-10
