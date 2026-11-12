@@ -7,8 +7,7 @@ date: 2026-11-12
 category: Actualidad
 portada: true
 image: /assets/img/articulos/terrenos-en-cusco-mas-caros-que-lima.jpg
-image_portada: /assets/img/articulos/terrenos-cusco/portada-vertical.jpg
-image_portada_vertical: true
+image_portada: /assets/img/articulos/terrenos-cusco/portada-horizontal.jpg
 image_portada_alt: '¿Terrenos en Cusco más caros que Lima? Turismo, geografía y MINCUL. Y por qué nunca podrás comprar una casa. Casona cusqueña de noche en pixel art, con un farol y un turista tomando fotos.'
 image_caption: 'Casona cusqueña de noche en pixel art. Ilustración: Ciudad Sur, Laboratorio urbano del Cusco.'
 numero: null
