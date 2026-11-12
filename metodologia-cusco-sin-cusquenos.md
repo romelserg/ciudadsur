@@ -44,6 +44,8 @@ Para ver quiénes se fueron, comparamos la población por edad simple de 2017 (p
 
 **Exposición.** Para cada uno de los 772 colegios contamos las viviendas enteras de Airbnb a menos de 500 metros, y los agrupamos en 0 a 9, 10 a 49 y 50 o más.
 
+**Colegios que dejaron de registrar alumnos.** Contamos los colegios con al menos 20 alumnos en 2012 que en 2025 no registran matrícula. Ninguno es público. Entre los privados son 20 de 160 en la zona con 50 o más viviendas enteras de Airbnb a 500 metros (12 %), 5 de 75 en la zona intermedia (7 %) y 1 de 64 en la de menos (2 %). Casi todos son jardines de inicial y la mitad dejó de registrar alumnos entre 2020 y 2022. No verificamos en el terreno si cada uno cerró, cambió de código o se fusionó con otro.
+
 **Prueba más exigente.** Comparamos cada colegio consigo mismo a lo largo del tiempo (615 colegios que ya existían en 2012-2014), descontando lo que cambió cada año en cada nivel y en colegios públicos y privados. Con todos los colegios, la matrícula queda −11,8 % en 2025 por cada desviación estándar de turismo cercano (intervalo de 95 %: −17,9 a −5,7 %). Solo con colegios a la misma distancia de la Plaza de Armas, el efecto es −8,3 % y deja de ser estadísticamente distinguible de cero (intervalo: −19,5 a +2,8 %). Airbnb y hoteles se concentran en las mismas cuadras, así que esta prueba no separa el efecto de uno y otro.
 
 ## 6. Migración
@@ -79,4 +81,5 @@ No publicamos la lista de anuncios de Airbnb con su ubicación, por respeto a la
 
 ## Correcciones
 
+- 11 de noviembre de 2026: corregimos la frase sobre colegios cerrados. Decía que 20 colegios de la zona con más Airbnb y uno de la de menos ya no tenían matrícula. Los 20 son colegios privados, casi todos pequeños jardines de inicial, y la mitad dejó de registrar alumnos entre 2020 y 2022. Ahora la nota da la proporción (12 % frente a 2 % de los colegios privados) y aclara que ningún colegio público dejó de funcionar.
 - 10 de noviembre de 2026: retiramos de la nota la sección «Lo que habría pasado sin el cambio», que comparaba el Cusco con una mezcla de otras ciudades (control sintético). Con solo tres censos anteriores a 2017, el ejercicio no era lo bastante sólido y no medía el efecto del turismo por separado.
